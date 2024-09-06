@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1 Wavelength of a typical X-Ray is in the range?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "0.05 to 0.25 nm",
+        "b": "0.5 to 1 nm",
+        "c": "1 to 5 nm",
+        "d": "5-10 nm"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +19,63 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2 The crystal structure of Copper (Cu) at room temperature is?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3 The crystal structure of Titanium (Ti) at room temperature is?",
+      "answers": {
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4 The crystal structure which has lattice parameters a = b = c and angles α = β = γ?",
+      "answers": {
+        "a": "Triclinic",
+        "b": "Monoclinic",
+        "c": "Tetragonal",
+        "d": "Cubic"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5 Which of the following is the key principle behind X-ray diffraction?",
+      "answers": {
+        "a": "Photoelectric effect",
+        "b": "Compton scattering",
+        "c": "Bragg's law",
+        "d": "Rutherford scattering"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
