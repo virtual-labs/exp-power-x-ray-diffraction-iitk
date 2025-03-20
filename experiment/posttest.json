@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1 Densest packed planes in FCC crystal structure are?",
+      "question": "1. Densest packed planes in FCC crystal structure are?",
       "answers": {
         "a": "{110}",
         "b": "{001}",
@@ -10,7 +10,7 @@
         "d": "{111}"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2 The crystal structure of Iron (Fe) at room temperature is?",
+      "question": "2. The crystal structure of Iron (Fe) at room temperature is?",
       "answers": {
         "a": "BCC",
         "b": "FCC",
@@ -27,7 +27,7 @@
         "d": "None of these"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -36,15 +36,15 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3 Reflections allowed for BCC crystal are?",
+      "question": "3. Reflections allowed for BCC crystal are?",
       "answers": {
         "a": "for even values of (h + k + l)",
-        "b": "for all values of h2+ k2+ l2",
+        "b": "for all values of h²+k²+l²",
         "c": "when h, k and l are all even or all odd",
         "d": "None of these"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -53,7 +53,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "4 The crystal structure which has lattice parameters a = b ≠ c and angles α = β = γ?",
+      "question": "4. The crystal structure which has lattice parameters a = b ≠ c and angles α = β = γ?",
       "answers": {
         "a": "Triclinic",
         "b": "Monoclinic",
@@ -61,7 +61,7 @@
         "d": "Cubic"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -70,7 +70,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "5 In an XRD pattern, what do the peaks correspond to?",
+      "question": "5. In an XRD pattern, what do the peaks correspond to?",
       "answers": {
         "a": "The intensity of X-rays",
         "b": "The atomic mass of elements",
@@ -78,7 +78,7 @@
         "d": "The colour of the material"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
