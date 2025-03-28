@@ -3,8 +3,8 @@ In the diffractogram given in <b>Figure 2</b> for an unknown material, the follo
 <b>Steps :</b> <br>
 
 1. Firstly, the 2θ values where diffraction occurred are obtained,  <br>
-2. Subsequently, the corresponding θ, sin θ and sin2 θ values for all the peaks are noted, <br>
-3. The ratios of sin^2θ value of all the peaks with respect to the first peak is obtained, <br>
+2. Subsequently, the corresponding θ, sin θ and sin<sup>2</sup>θ values for all the peaks are noted, <br>
+3. The ratios of sin<sup>2</sup>θ value of all the peaks with respect to the first peak is obtained, <br>
 4. Finally, the obtained ratios are multiplied by a suitable integer to convert all these ratios into an integer. <br><br>
 
 <img src="images/img_3.png"><br><br>
