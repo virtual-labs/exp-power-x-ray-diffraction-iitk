@@ -1,4 +1,4 @@
-In the diffractogram given in <b>Figure 2<b> for an unknown material, the following procedure is adhered: <br><br>
+In the diffractogram given in <b>Figure 2</b> for an unknown material, the following procedure is adhered: <br><br>
 
 <b>Steps :</b> <br>
 
@@ -9,8 +9,7 @@ In the diffractogram given in <b>Figure 2<b> for an unknown material, the follow
 
 <img src="images/img_3.png"><br><br>
 
-5. 	The distinction between lattices of the cubic system is possible by using the
-the fact that not all combinations of h^2+k^2+l^2 lead to reflection for a given lattice. The ratio of h^2+k^2+l^2 values for allowed reflections from different crystals are as follows [3]: <br><br>
+5. The distinction between lattices of the cubic system is possible by using the fact that not all combinations of h<sup>2</sup>+k<sup>2</sup>+l<sup>2</sup> lead to reflection for a given lattice. The ratio of h<sup>2</sup>+k<sup>2</sup>+l<sup>2</sup> values for allowed reflections from different crystals are as follows [3]: <br><br>
 
 <img src="images/img_4.png"><br>
 
