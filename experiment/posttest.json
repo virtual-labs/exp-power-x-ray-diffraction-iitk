@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. Densest packed planes in FCC crystal structure are?",
+      "question": "1. What is the primary purpose of using a monochromator in XRD experiments:",
       "answers": {
-        "a": "{110}",
-        "b": "{001}",
-        "c": "{210}",
-        "d": "{111}"
+        "a": "To increase the intensity of X-rays",
+        "b": "To filter out unwanted wavelengths and obtain monochromatic X-rays",
+        "c": "To decrease the diffraction angle",
+        "d": "To enhance fluorescence signals"
       },
       "explanations": {
         "a": "Explanation 1",
@@ -15,7 +15,7 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
