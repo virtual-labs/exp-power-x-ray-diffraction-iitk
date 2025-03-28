@@ -23,9 +23,8 @@
       "answers": {
         "a": "BCC",
         "b": "FCC",
-        
         "c": "HCP",
-        "d": "None of these"
+        "d": "DHCP"
       },
       "explanations": {
         "a": "Explanation 1",
@@ -42,7 +41,7 @@
         "a": "BCC",
         "b": "FCC",
         "c": "HCP",
-        "d": "None of these"
+        "d": "SC"
       },
       "explanations": {
         "a": "Explanation 1",
@@ -54,12 +53,12 @@
       "difficulty": "beginner"
     },
     {
-      "question": "4. The crystal structure which has lattice parameters a = b = c and angles α = β = γ?",
+      "question": "4. In Bragg's law, : nλ=2d sin⁡θ,what does 'd' represent:",
       "answers": {
-        "a": "Triclinic",
-        "b": "Monoclinic",
-        "c": "Tetragonal",
-        "d": "Cubic"
+        "a": "The lattice constant of the unit cell",
+        "b": "Distance between atoms in the unit cell",
+        "c": "Interplanar spacing between crystal planes",
+        "d": "The wavelength of the incident X-ray"
       },
       "explanations": {
         "a": "Explanation 1",
@@ -67,7 +66,7 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
