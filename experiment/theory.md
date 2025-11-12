@@ -10,9 +10,9 @@
 For crystals, the produced X-rays are directed at a crystalline solid, the waves can be scattered by the planes of atoms within the crystal. Due to the regular spacing of these atomic planes, the scattered X-rays can interfere constructively or destructively, depending on their phase differences.<br><br>
 
 <img src="images/fig1.png"><br>
-Figure 1: (a) Constructive and (b) destructive interference [1]<br><br>
+Figure 1: (a) Constructive and (b) destructive interference <br><br>
 
-4.	Diffraction Peaks: Constructive interference of the scattered X-rays leads to diffraction peaks observed at specific angles. The intensities and positions of these peaks provide information about the crystal structure, such as the arrangement and spacing of atoms.<br>
+4.	<b>Diffraction Peaks</b>: Constructive interference of the scattered X-rays leads to diffraction peaks observed at specific angles. The intensities and positions of these peaks provide information about the crystal structure, such as the arrangement and spacing of atoms.<br>
 Crystal structure determination of an unknown powder using XRD is one of its many applications. The following method is crucial for determining the atomic structure of materials and identifying unknown crystalline substances. For cubic crystals, interplanar spacing d, can be written as a function of the miller indices and lattice parameter a, using the following relation: <br>
 
 <img src="images/img_1.png"><br>
@@ -21,5 +21,6 @@ For first-order diffraction, n=1 and monochromatic beam source λ and lattice pa
 
 <img src="images/img_2.png"><br>
 Figure 2: Diffractogram for an unknown material <br><br>
+
 
 
