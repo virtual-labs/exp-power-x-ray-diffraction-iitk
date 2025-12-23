@@ -1,0 +1,27 @@
+#modify {
+     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.degree-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* use full container width */
+}
+
+.degree-wrapper input[type="number"] {
+    padding-right: 18px; /* space for ° symbol */
+    width: 100%;          /* input fills the wrapper */
+    box-sizing: border-box; /* include padding in width */
+}
+
+.deg-symbol {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-weight: bold;
+}
+
