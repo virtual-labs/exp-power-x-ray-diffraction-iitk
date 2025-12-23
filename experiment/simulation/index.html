@@ -13,6 +13,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/controlpanel.css" />
+    <link rel="stylesheet" href="simulation\css\modify.css">
+    <link rel="stylesheet" href="css/controlpanel.css" />
     <link rel="stylesheet" href="css/output.css" />
     <link rel="stylesheet" href="css/simulator.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -96,26 +98,66 @@
             />
             <span class="button-label" >STANDBY&nbsp;ON/OFF</span>
           </label>
-          <!-- voltage and current slider -->
-          <div class="slider-container">
-            <div class="slider-value-container" >
-                <label for="voltage-slider" class="slider-label"  style=" font-size: 18px;">Voltage: <span style=" font-size: 18px;" id="voltage-value" class="slider-value">0 kV</span></label>
-                <input type="range" id="voltage-slider" min="0" max="100" step="5" value="0" class="slider" disabled>
-            </div>
-    
-            <div class="slider-value-container">
-                <label for="current-slider" class="slider-label"  style=" font-size: 18px;">Current: <span style=" font-size: 18px;" id="current-value" class="slider-value">0 mA</span></label>
-                <input type="range" id="current-slider" min="0" max="100" step="5"  value="0" class="slider" disabled>
-            </div>
+        <!-- voltage and current slider -->
+<div class="slider-container">
+
+    <!-- VOLTAGE SECTION -->
+    <div class="slider-value-container">
+        <label for="voltage-slider" class="slider-label" style="font-size: 18px;">
+            Voltage: 
+            <span id="voltage-value" class="slider-value" style="font-size: 18px;">0 kV</span>
+        </label>
+
+        <!-- Set + Reset Buttons (Bootstrap) -->
+       
+
+        <!-- Your original slider (kept as-is) -->
+     <div  class="d-flex align-items-center gap-2">
+    <input type="range" id="voltage-slider" min="0" max="100" step="5" 
+           value="0" class="slider" disabled>
+
+    <button id="set-voltage" class="btn btn-success btn-sm">Set</button>
+
+    <button id="reset-voltage" class="btn btn-danger btn-sm">Reset</button>
+</div>
+
+      
+    </div>
+
+    <!-- CURRENT SECTION -->
+    <div class="slider-value-container">
+        <label for="current-slider" class="slider-label" style="font-size: 18px;">
+            Current: 
+            <span id="current-value" class="slider-value" style="font-size: 18px;">0 mA</span>
+        </label>
+
+        <!-- Set + Reset Buttons -->
+        
+
+        <!-- Your original slider -->
+          <div  class="d-flex align-items-center gap-2">
+
+        <input type="range" id="current-slider" min="0" max="100" step="5" 
+               value="0" class="slider mt-2" disabled>
+              <button id="set-current" class="btn btn-success btn-sm ms-3">Set</button>
+        <button id="reset-current" class="btn btn-danger btn-sm ms-2">Reset</button>
         </div>
+
+    </div>
+
+</div>
+
+
+
+      
         </div>
         <!-- scan setting -->
         <div class="container-fluid" id="box3">
           START SCANNING
           <!-- start angle -->
           <div class="container" id="SA">
-            <label for="start-angle" class="start-angle"
-              >Start Angle (2θ):</label
+            <label for="start-angle" class="start-angle" style="width : 30%"
+              >Start Angle (2θ)(deg°):</label
             >
             <input
            
@@ -133,7 +175,7 @@
 
           <!-- end angle -->
           <div class="container" id="EA">
-            <label for="end-angle" class="end-angle">End Angle(2θ):</label>
+            <label for="end-angle" class="end-angle" style="width : 30%">End Angle(2θ)(deg°):</label>
             <input
               type="number"
               id="end-angle"
@@ -147,7 +189,7 @@
           </div>
           <!-- step size  -->
           <div class="container" id="SS">
-            <label for="options" class="step-size">Step Size:</label>
+            <label for="options" class="step-size" style="width : 30%">Step Size(deg°) :</label>
             <input id="options1" name="options"
             type="number"
             id="step"
@@ -161,7 +203,7 @@
          
           <!-- scan rate -->
           <div class="container" id="SR">
-            <label for="options" class="scan-rate">Scan Rate:</label>
+            <label for="options" class="scan-rate" style="width : 30%">Scan Rate(deg°/min):</label>
             <input id="options2"  onclick="cal()" name="options"
             type="number"
             id="step"
@@ -173,9 +215,9 @@
           </div>
           <!-- scan time -->
           <div class="container" id="ST">
-            <label for="scan-time" class="scan-time" 
-              >Scan Time</label >
-            <input style="width: 40%;"  id="result" />
+            <label for="scan-time" class="scan-time" style="width : 30%"
+              >Scan Time(sec) :</label >
+            <input style="width: 40% ; border-radius: 5px"  id="result" />
           </div>
         </div>
         <!-- start scan button -->
@@ -249,9 +291,7 @@
       <img class="graph" src="images/output/graph.png" id="graph" style="height: 70%; width:98%; display: none; ">
      </div>
     </div>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+   
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
 
@@ -260,11 +300,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    
     <script src="js/main.js">
     </script>
   </body>

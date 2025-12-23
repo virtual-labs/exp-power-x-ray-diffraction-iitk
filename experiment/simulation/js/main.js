@@ -3,11 +3,10 @@
 
 var text;
 const typeSpeed = 60;
-let english = true; // Initialize the 'english' variable with a default value
+let english = true; 
 var matSelected = 1;
 var timerId,
   typeTarget = $("#typer"),
-  // tWrapper = $("#toast-wrapper"),
   ti = 0,
   currentStep = 0,
   contrast = 0,
@@ -21,7 +20,9 @@ var timerId,
   removeButtonclicked = false,
   inp = 0;
 
-let isImageYDropped = false; // Flag to track if image-y has been dropped
+//---------------------------------------------------------------
+// TYPEWRITER
+//---------------------------------------------------------------
 function type(txt, cur = 0) {
   if (cur == txt.length) {
     timerId = -1;
@@ -35,7 +36,9 @@ function type(txt, cur = 0) {
   timerId = setTimeout(type, typeSpeed, txt, cur + 1);
 }
 
-
+//---------------------------------------------------------------
+// START
+//---------------------------------------------------------------
 function start() {
   if (english) {
     type("Welcome, Get started by switching on the machine.");
@@ -49,7 +52,6 @@ function start() {
 function hindiVoice(btn) {
   english = false;
   start();
-
   document.getElementById("dialogue-box-parent").style.display = 'none';
 }
 
@@ -59,369 +61,288 @@ function englishVoice(btn) {
   document.getElementById("dialogue-box-parent").style.display = 'none';
 }
 
-// text to speech 
-
+//---------------------------------------------------------------
+// SPEECH
+//---------------------------------------------------------------
 function textToSpeech(text, lang) {
-  const isSpeechSynthesisSupported = 'SpeechSynthesisUtterance' in window;
+  const ok = 'SpeechSynthesisUtterance' in window;
+  if (!ok) return;
 
-  if (isSpeechSynthesisSupported) {
-    const utterance = new SpeechSynthesisUtterance();
+  const utter = new SpeechSynthesisUtterance(text);
+  if (lang) utter.lang = lang;
 
-    utterance.text = text;
-
-    if (lang) {
-      utterance.lang = lang;
-    }
-
-    // Check if speech synthesis is paused and resume it if necessary
-    if (window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-    }
-
-    // Start the speech synthesis
-    window.speechSynthesis.speak(utterance);
-  } else {
-    alert("Synthesis Not Supported !");
-    console.error("Speech synthesis is not supported in this browser.");
+  if (window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
   }
+
+  window.speechSynthesis.speak(utter);
 }
 
-
-// initial popup function of screen
-
+// Initial popup
 $(function () {
   textToSpeech("WELCOME TO THE XRD SIMULATION");
-
-  // Trigger another text-to-speech function after 2 seconds
   setTimeout(function () {
-    // Call your second text-to-speech function here
     textToSpeech("अपनी सुविधा अनुसार भाषा का चयन करें।", "hi-IN");
   }, 1000);
 });
-const box = document.querySelector(".box");
 
-// function moveBox() {
-//   box.classList.toggle("moved");
-// }
-
-
-
-
-
-// machine on off button
+//---------------------------------------------------------------
+// MACHINE ON/OFF
+//---------------------------------------------------------------
 const onButton = document.getElementById("onButton");
 const offButton = document.getElementById("offButton");
 
 onButton.addEventListener("click", () => {
   onButton.classList.add("green");
- 
   offButton.classList.remove("green");
-  onButton.disabled = true; // Disable the "On" button
-  $("#material").prop("disabled", false);  // material unable when machine on 
+  onButton.disabled = true;
+
+  $("#material").prop("disabled", false); 
 
   if (english) {
-    type(" Select the Sample for testing "); //text 
-    textToSpeech(" Select the Sample for testing");  // voice
+    type(" Select the Sample for testing ");
+    textToSpeech(" Select the Sample for testing");
   } else {
     type(" अपने एक्सपेरिनेट के अनुसार सैंपल का चयन करे।");
     textToSpeech(" अपने एक्सपेरिनेट के अनुसार सैंपल का चयन करे।", "hi-IN");
   }
-
-
 });
 
 offButton.addEventListener("click", () => {
   offButton.classList.remove("green");
- 
   onButton.classList.remove("green");
-  onButton.disabled = false; // Enable the "On" button
-  window.location.reload();  // reload the whole window
-
+  onButton.disabled = false;
+  window.location.reload();
 });
 
-
-// sample selection js 
-
+//---------------------------------------------------------------
+// SAMPLE SELECTION
+//---------------------------------------------------------------
 function changeSampleImage() {
-
-  $("#toggle").prop("disabled", false);  // Enabling the door 
+  $("#toggle").prop("disabled", false);
 
   if (english) {
-    type(" Open the Door of XRD Machine ! By Using  Door Button ");
-    textToSpeech(" Open the Door of XRD Machine ! By Using  Door Button ");
+    type(" Open the Door of XRD Machine ! By Using Door Button ");
+    textToSpeech(" Open the Door of XRD Machine ! By Using Door Button ");
   } else {
-    type("  डोर बटन दबाकर एक्सआरडी मशीन के दरवाजे खोले।");
-    textToSpeech("  डोर बटन दबाकर एक्सआरडी मशीन के दरवाजे खोले।", "hi-IN");
+    type(" डोर बटन दबाकर एक्सआरडी मशीन के दरवाजे खोले।");
+    textToSpeech(" डोर बटन दबाकर एक्सआरडी मशीन के दरवाजे खोले।", "hi-IN");
   }
-
-
 }
 
+//---------------------------------------------------
+//---------------------------------------------------------------
+// DOOR OPEN/CLOSE
+//---------------------------------------------------------------
+const toggle = document.getElementById("toggle");
+const leftDoor = document.getElementById("leftDoor");
+const rightDoor = document.getElementById("rightDoor");
 
-// js for slider button
+function openGate() {
+  if (toggle.checked) {
+    leftDoor.style.transform = "rotateY(-90deg)";
+    rightDoor.style.transform = "rotateY(90deg)";
+    $("#option1").prop("disabled", true);
+
+    if (english) {
+      type(" Close the Door of XRD Machine !");
+      textToSpeech(" Close the Door of XRD Machine !");
+    } else {
+      type(" मशीन का दरवाजा बंद करे।");
+      textToSpeech(" मशीन का दरवाजा बंद करे।", "hi-IN");
+    }
+
+  } else {
+    leftDoor.style.transform = "rotateY(0deg)";
+    rightDoor.style.transform = "rotateY(0deg)";
+    $("#material").prop("disabled", true);
+    $("#option1").prop("disabled", false);
+
+    if (english) {
+      type(" On the X-ray tube using StandBy Button ");
+      textToSpeech(" On the X-ray tube using StandBy Button ");
+    } else {
+      type(" स्टैंडबाइ बटन दबाकर एक्स रे चालू करें।");
+      textToSpeech(" स्टैंडबाइ बटन दबाकर एक्स रे चालू करें।", "hi-IN");
+    }
+  }
+}
+toggle.addEventListener("change", openGate);
+
+//---------------------------------------------------------------
+// STANDBY CLICK → ENABLE VOLTAGE
+//---------------------------------------------------------------
+$("#option1").click(function () {
+  $("#toggle").prop("disabled", true);
+  $("#voltage-slider").prop("disabled", false);
+
+  if (english) {
+    type(" Now set Accelerating Voltage");
+    textToSpeech(" Now set Accelerating Voltage");
+  } else {
+    type(" एकेलरेटिंग वोल्टेज सेट करें।");
+    textToSpeech(" एकेलरेटिंग वोल्टेज सेट करें।", "hi-IN");
+  }
+});
+
+//---------------------------------------------------------------
+// DOUBLE CLICK VOLTAGE → ENABLE CURRENT
+
+// VOLTAGE & CURRENT — INDEPENDENT SYSTEM (UPDATED)
+// VOLTAGE & CURRENT — INDEPENDENT SYSTEM (UPDATED)
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+// VOLTAGE & CURRENT — INDEPENDENT SYSTEM (UPDATED)
+//---------------------------------------------------------------
 const voltageSlider = document.getElementById("voltage-slider");
 const voltageValue = document.getElementById("voltage-value");
 
 const currentSlider = document.getElementById("current-slider");
 const currentValue = document.getElementById("current-value");
 
-voltageSlider.addEventListener("input", function () {
+const setVoltage = document.getElementById("set-voltage");
+const resetVoltage = document.getElementById("reset-voltage");
+
+const setCurrent = document.getElementById("set-current");
+const resetCurrent = document.getElementById("reset-current");
+
+// LIVE VALUE UPDATE
+voltageSlider.addEventListener("input", () => {
   voltageValue.textContent = `${voltageSlider.value} kV`;
-
 });
-
-currentSlider.addEventListener("input", function () {
+currentSlider.addEventListener("input", () => {
   currentValue.textContent = `${currentSlider.value} mA`;
-
-
 });
 
+//----------------------
+// SET VOLTAGE → ENABLE CURRENT
+//----------------------
+setVoltage.addEventListener("click", () => {
+  window.speechSynthesis.cancel();  
+  clearTimeout(timerId);
+  typeTarget.html("");             
 
-// js for open gate 
-const toggle = document.getElementById("toggle");
-const leftDoor = document.getElementById("leftDoor");
-const rightDoor = document.getElementById("rightDoor");
+  // Disable voltage slider
+  voltageSlider.disabled = true;
 
-// Function to open the gate when the toggle is switched on
-function openGate() {
-  if (toggle.checked) {
-    leftDoor.style.transform = "rotateY(-90deg)";
-    rightDoor.style.transform = "rotateY(90deg)";
-    box.classList.toggle("moved");
-    $("#option1").prop("disabled", true); // x-ray tube off when gate on 
-    // door close instruction 
-    if (english) {
-      type("  Close the Door of XRD Machine ! By Using  Door Button ");
-      textToSpeech("  Close the Door of XRD Machine ! By Using  Door Button ");
-    } else {
-      type("  सैंपल का चयन हो चुका है । मशीन का दरवाजे बंद करे ।");
-      textToSpeech("  सैंपल का चयन हो चुका है । मशीन का दरवाजे बंद करे ।", "hi-IN");
-    }
+  // Enable current slider
+  currentSlider.disabled = false;
 
+  // Make voltage button colorless / disabled
+  setVoltage.style.backgroundColor = "#d6d6d6";
+  setVoltage.style.color = "#000";
+  setVoltage.disabled = true;
 
+  // Speak instructions for next step
+  if (english) {
+    type(" Now set the Current");
+    textToSpeech(" Now set the Current");
   } else {
-    // Close the gate when the toggle is switched off
-    leftDoor.style.transform = "rotateY(0deg)";
-    rightDoor.style.transform = "rotateY(0deg)";
-    $("#material").prop("disabled", true);
-    $("#option1").prop("disabled", false);  //x-ray tube On when gate on
-
-    // Instruction steps after closing the door 
-    if (english) {
-      type("  On the X-ray tube Button By Click on StandBy Button ");
-      textToSpeech("  On the X-ray tube Button By Click on StandBy Button ");
-    } else {
-      type("  स्टैंडबाई बटन को क्लिक कर के एक्स रे ट्यूब को चालू करें।");
-      textToSpeech("  स्टैंडबाई बटन को क्लिक कर के एक्स रे ट्यूब को चालू करें।", "hi-IN");
-    }
-
+    type(" करंट सेट करें।");
+    textToSpeech(" करंट सेट करें।", "hi-IN");
   }
-}
-
-// Add an event listener to open the gate when the toggle is changed
-toggle.addEventListener("change", openGate);
-
-
-
-// X-ray tube Stand By On/OFF instrunction for voltage
-
-$("#option1").click(function () {
-  $("#toggle").prop("disabled",true);
-$("#voltage-slider").prop("disabled",false);
-  if(english){
-      type("  Now set Accelerating Voltage");
-      textToSpeech("  Now set Accelerating Voltage ");
-  }
-  else {
-      type("    अपने एक्सपेरिमेट के अनुसार एक्लेरेटिंग वोल्टेज का सेटकरने का प्रयास करें |");
-      textToSpeech("    अपने एक्सपेरिमेट के अनुसार एक्लेरेटिंग वोल्टेज को सेट करने का प्रयास करें |","hi-IN");
-  }
-
 });
 
-//voltage slider  value setting by double click 
+//----------------------
+// RESET VOLTAGE
+//----------------------
+resetVoltage.addEventListener("click", () => {
+  voltageSlider.disabled = false;
+  voltageSlider.value = 0;
+  voltageValue.textContent = "0 kV";
 
-$("#voltage-slider").dblclick(function () {
-  // Disable the current-slider on double-click
-  $("#voltage-slider").prop("disabled", true);
-      // Enable the current-slider
-    $("#current-slider").prop("disabled", false);
-
-    if(english){
-      type("  Now set  the Current ");
-      textToSpeech("  Now set the Current ");
-  }
-  else {
-      type("    अपने एक्सपेरिमेट के अनुसार करेंट को  सेटकरने का प्रयास करें |");
-      textToSpeech("    अपने एक्सपेरिमेट के अनुसार करेंट को सेट करने का प्रयास करें |","hi-IN");
-  }
-
+  // Restore voltage button style
+  setVoltage.style.backgroundColor = "";
+  setVoltage.style.color = "";
+  setVoltage.disabled = false;
 });
 
-// current value set by double clicking 
+//----------------------
+// SET CURRENT → ENABLE START ANGLE
+//----------------------
+setCurrent.addEventListener("click", () => {
+  window.speechSynthesis.cancel();  
+  clearTimeout(timerId);
+  typeTarget.html("");             
 
-$("#current-slider").dblclick(function () {
-  // Disable the current-slider on double-click
-  $("#current-slider").prop("disabled", true);
-      // Enable the start angle
-    $("#start-angle").prop("disabled", false);
+  // Disable current slider
+  currentSlider.disabled = true;
 
-// instructiion for start angle 
-if(english){
-  type("  Now set  the Start Angle (2θ)");
-  textToSpeech("  Now set  the Start Angle (2θ) ");
-}
-else {
-  type("    अपने एक्सपेरिमेट के अनुसार प्रारंभिक कोण को  सेट करने का प्रयास करें |");
-  textToSpeech("    अपने एक्सपेरिमेट के अनुसार प्रारंभिक कोण को सेट करने का प्रयास करें |","hi-IN");
+  // Enable start angle input
+  $("#start-angle").prop("disabled", false);
+
+  // Make current button colorless / disabled
+  setCurrent.style.backgroundColor = "#d6d6d6";
+  setCurrent.style.color = "#000";
+  setCurrent.disabled = true;
+
+  // Speak instructions for next step
+if (english) {
+    type(" Now set all parameters: Start Angle (2θ), End Angle (2θ), Step Size, Scan Rate, and Scan Time. After setting all values, click on Start Scan to begin.");
+    textToSpeech("Now set all parameters: Start Angle two theta, End Angle two theta, Step Size, Scan Rate, and Scan Time. After setting all values, click on Start Scan to begin.");
+} else {
+    type(" अब सभी मान सेट करें: प्रारंभिक कोण (2θ), अंतिम कोण (2θ), चरण आकार, स्कैन दर और स्कैन समय। सभी मान सेट करने के बाद, स्कैन शुरू करने के लिए Start Scan बटन पर क्लिक करें।");
+    textToSpeech("अब सभी मान सेट करें: प्रारंभिक कोण दो थेटा, अंतिम कोण दो थेटा, चरण आकार, स्कैन दर और स्कैन समय। सभी मान सेट करने के बाद, स्कैन शुरू करने के लिए Start Scan बटन पर क्लिक करें।", "hi-IN");
 }
 
 });
 
-function cal(){
-  var a = parseFloat(document.getElementById('options1').value);
-var b = parseFloat(document.getElementById('options2').value);
+//----------------------
+// RESET CURRENT
+//----------------------
+resetCurrent.addEventListener("click", () => {
+  currentSlider.disabled = false;
+  currentSlider.value = 0;
+  currentValue.textContent = "0 mA";
 
-document.getElementById('result').value = a*b;
-}
-
-// function startScan(){
-//   var x = document.getElementById('result').value = a*b;
-
-//   if(x!=0){
-//     <div class="col-xl-4 themed-grid-col">
-//     <img class="graph" src="images/output/graph.png" id="graph" style="height: 70%; width:98%; display: none; "/>
-//    </div>
-//   }
-
-// }
-function startScan1(){
-  const visibilites = document.getElementById('x-ray-source1');
-  const visibilites1 = document.getElementById('detector-image1');
-  visibilites.style.visibility="visible";
-  visibilites1.style.visibility="visible";
-}
+  // Restore current button style
+  setCurrent.style.backgroundColor = "";
+  setCurrent.style.color = "";
+  setCurrent.disabled = false;
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  rotation of xray source according to start angle
-
-
-function rotateAndMoveImages() {
-  // Get the user input value for the start angle
-  const startAngle = document.getElementById("start-angle").value;
-
-  // Calculate the y-translation based on the start angle (adjust the factor as needed)
-  const yTranslation = (-Math.sin((startAngle * Math.PI) / 180) * 100) / 2;
-
-  // Apply rotations and translations to both images based on the start angle
-  const xRaySourceImage = document.getElementById("x-ray-source");
-  const detectorImage = document.getElementById("detector-image");
-
-  // Rotate the X-ray source image based on the start angle
-  xRaySourceImage.style.transform = `rotate(${startAngle / 10}deg) translateY(${yTranslation}px)`;
-
-  // Rotate the detector image in the opposite direction
-  detectorImage.style.transform = `rotate(${-startAngle / 10}deg) translateY(${yTranslation}px)`;
-}
-
-
-
-
-// js code for the dotted ray 
-
-function moveDottedLine() {
-  // Get the user input value for the end angle
-  const endAngle = parseInt(document.getElementById("end-angle").value);
-
-  // Calculate the new rotation for the dotted line (opposite direction)
-  //const rotation = 28 - (endAngle - 75); // Start at 75 degrees and subtract the difference
-
-  // Apply the new rotation to the dotted line
-  // document.getElementById("dotted-line").style.transform = `translateX(-50%) rotate(${rotation}deg)`;
-}
-
-function showDottedLine() {
-  // Get the end angle input value
-  const endAngle = parseInt(document.getElementById("end-angle").value);
-
-  // Show the dotted line when the input is enabled (end angle is not empty)
-  if (!isNaN(endAngle)) {
-    document.getElementById("dotted-line").style.display = "block";
-  } else {
-    document.getElementById("dotted-line").style.display = "none";
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// js for graph 
+//---------------------------------------------------------------
+// GRAPH + SCAN ANIMATION
+//---------------------------------------------------------------
 const startScan = document.getElementById('startScan');
-const graphImg = document.querySelector('graph');
 
 startScan.addEventListener('click', () => {
-  // Show the overlay image when the "Open Door" button is clicked
   setTimeout(function () {
     document.getElementById("graph").style.display = "block";
   }, 2000);
 });
 
-
-
-
 startScan.addEventListener('click', function () {
-
   const detector = document.getElementById("detector");
   const source = document.getElementById("source");
 
   source.style.animationName = "moveUpDown";
   detector.style.animationName = "oppMoveUpDown";
+
   setTimeout(function () {
-      source.style.animationName = "moveUpDownZeroToDown";
-      detector.style.animationName = "oppMoveUpDownZeroToDown";
+    source.style.animationName = "moveUpDownZeroToDown";
+    detector.style.animationName = "oppMoveUpDownZeroToDown";
   }, 5000);
 
   setTimeout(function () {
-      source.style.animationName = "moveUpDownToOriginal ";
-      detector.style.animationName = "oppMoveUpDownToOriginal";
+    source.style.animationName = "moveUpDownToOriginal";
+    detector.style.animationName = "oppMoveUpDownToOriginal";
   }, 10000);
-
 });
+function type(txt, cur = 0) {
+  if (cur == txt.length) {
+    timerId = -1;
+
+    // Add scroll class after typing finishes
+    $('#typer').addClass('scroll-animation');
+    return;
+  }
+  if (cur == 0) {
+    typeTarget.html("");
+    clearTimeout(timerId);
+  }
+  typeTarget.append(txt.charAt(cur));
+  timerId = setTimeout(type, typeSpeed, txt, cur + 1);
+}
+
