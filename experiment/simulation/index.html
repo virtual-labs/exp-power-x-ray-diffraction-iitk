@@ -69,10 +69,10 @@
             <label for="options" class="specimen">Select a Specimen:</label>
             <select id="material" name="material" disabled onchange="changeSampleImage() ;">
               <option value="">None</option>
-              <option value="sand">Sand</option>
-              <option value="paper">Paper</option>
+              <option value="sand">Pure Si</option>
+              <!-- <option value="paper">Paper</option>
               <option value="aluminium">Aluminium</option>
-              <option value="glass">Glass</option>
+              <option value="glass">Glass</option> -->
             </select>
           </div>
          
@@ -155,7 +155,7 @@
         <div class="container-fluid" id="box3">
           START SCANNING
           <!-- start angle -->
-          <div class="container" id="SA">
+          <!-- <div class="container" id="SA">
             <label for="start-angle" class="start-angle" style="width : 30%"
               >Start Angle (2θ)(deg°):</label
             >
@@ -171,10 +171,26 @@
               onchange="rotateAndMoveImages()"
              >
            
-          </div>
+          </div> -->
+       <div class="container" id="SA">
+  <label for="start-angle" class="start-angle" style="width: 30%">
+    Start Angle (2θ)(deg°):
+  </label>
+
+  <input
+    type="number"
+    id="start-angle"
+    name="start-angle"
+    min="5"
+    max="75"
+    step="5"
+    value="25"
+    readonly
+  >
+</div>
 
           <!-- end angle -->
-          <div class="container" id="EA">
+          <!-- <div class="container" id="EA">
             <label for="end-angle" class="end-angle" style="width : 30%">End Angle(2θ)(deg°):</label>
             <input
               type="number"
@@ -186,9 +202,26 @@
               onchange="moveDottedLine()"
               oninput="showDottedLine()"
             />
-          </div>
+          </div> -->
+
+          <div class="container" id="EA">
+  <label for="end-angle" class="end-angle" style="width : 30%">
+    End Angle (2θ)(deg°):
+  </label>
+
+  <input
+    type="number"
+    id="end-angle"
+    name="end-angle"
+    min="75"
+    max="180"
+    step="5"
+    value="100"
+    readonly
+  />
+</div>
           <!-- step size  -->
-          <div class="container" id="SS">
+          <!-- <div class="container" id="SS">
             <label for="options" class="step-size" style="width : 30%">Step Size(deg°) :</label>
             <input id="options1" name="options"
             type="number"
@@ -198,11 +231,28 @@
             max="1"
             step=".001"
             />
-          </div>
+          </div> -->
+
+          <div class="container" id="SS">
+  <label for="options1" class="step-size" style="width : 30%">
+    Step Size (deg°) :
+  </label>
+
+  <input
+    type="number"
+    id="options1"
+    name="options"
+    min="0.001"
+    max="1"
+    step="0.001"
+    value="0.02"
+    readonly
+  />
+</div>
           
          
           <!-- scan rate -->
-          <div class="container" id="SR">
+          <!-- <div class="container" id="SR">
             <label for="options" class="scan-rate" style="width : 30%">Scan Rate(deg°/min):</label>
             <input id="options2"  onclick="cal()" name="options"
             type="number"
@@ -212,13 +262,13 @@
             max="1"
             step=".01"
             />
-          </div>
+          </div> -->
           <!-- scan time -->
-          <div class="container" id="ST">
+          <!-- <div class="container" id="ST">
             <label for="scan-time" class="scan-time" style="width : 30%"
               >Scan Time(sec) :</label >
             <input style="width: 40% ; border-radius: 5px"  id="result" />
-          </div>
+          </div> -->
         </div>
         <!-- start scan button -->
         <div class="container-fluid" id="box4">

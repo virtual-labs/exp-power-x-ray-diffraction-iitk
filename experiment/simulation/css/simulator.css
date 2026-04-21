@@ -48,6 +48,14 @@
     
    
   }
+
+  #start-angle:disabled {
+  background-color: white;
+  color: black;
+  opacity: 1;           /* removes faded look */
+  border: 1px solid #ccc; /* optional: normal border */
+  cursor: not-allowed;  /* optional */
+}
  
 @keyframes harry {
     0% {
