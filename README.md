@@ -20,4 +20,6 @@ Fill a brief description of this experiment here
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | Priya Singh | Student | Computer Science | BU Jhansi | mailto:priyasingh2332000@gmail.com
+1 | Priya Singh | Student | Computer Science | BU Jhansi | priyasingh2332000@gmail.com
+2 | Abhinav | Student | MSE  |  IIT Kanpur | adixit@iitk.ac.in
+3 | Khushboo Singh | MSE |  Employee |  IIT Kanpur | skhushboo@iitk.ac.in
