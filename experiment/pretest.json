@@ -2,15 +2,15 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Wavelength of a typical X-Ray is in the range?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "0.05 to 0.25 nm",
+        "b": "0.5 to 1 nm",
+        "c": "1 to 5 nm",
+        "d": "5-10 nm"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -19,15 +19,66 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. The crystal structure of Copper (Cu) at room temperature is?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "DHCP"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The crystal structure of Titanium (Ti) at room temperature is?",
+      "answers": {
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "SC"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. In Bragg's law, : nλ=2d sin⁡θ,what does 'd' represent:",
+      "answers": {
+        "a": "The lattice constant of the unit cell",
+        "b": "Distance between atoms in the unit cell",
+        "c": "Interplanar spacing between crystal planes",
+        "d": "The wavelength of the incident X-ray"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which of the following is the key principle behind X-ray diffraction?",
+      "answers": {
+        "a": "Photoelectric effect",
+        "b": "Compton scattering",
+        "c": "Bragg's law",
+        "d": "Rutherford scattering"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"

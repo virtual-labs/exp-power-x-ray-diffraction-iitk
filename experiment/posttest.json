@@ -2,15 +2,32 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. What is the primary purpose of using a monochromator in XRD experiments:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To increase the intensity of X-rays",
+        "b": "To filter out unwanted wavelengths and obtain monochromatic X-rays",
+        "c": "To decrease the diffraction angle",
+        "d": "To enhance fluorescence signals"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The crystal structure of Iron (Fe) at room temperature is?",
+      "answers": {
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
@@ -19,15 +36,49 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "3. Reflections allowed for BCC crystal are?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "for even values of (h + k + l)",
+        "b": "for all values of h²+k²+l²",
+        "c": "when h, k and l are all even or all odd",
+        "d": "None of these"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The crystal structure which has lattice parameters a = b ≠ c and angles α = β = γ?",
+      "answers": {
+        "a": "Triclinic",
+        "b": "Monoclinic",
+        "c": "Tetragonal",
+        "d": "Cubic"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In an XRD pattern, what do the peaks correspond to?",
+      "answers": {
+        "a": "The intensity of X-rays",
+        "b": "The atomic mass of elements",
+        "c": "The specific crystal planes within the material",
+        "d": "The colour of the material"
+      },
+      "explanations": {
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
