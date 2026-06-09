@@ -19,6 +19,8 @@ Crystal structure determination of an unknown powder using XRD is one of its man
 
 For first-order diffraction, n=1 and monochromatic beam source λ and lattice parameter <i>a</i> of a material is constant; therefore, the sum of the squares of the miller indices of a plane will be in proportion to the sin<sup>2</sup> θ values [2]. <br>
 
+The positions of the diffraction peaks in an XRD pattern are directly related to the interplanar spacing of the crystal. By measuring the diffraction angles and calculating the corresponding d-spacings, the crystal structure can be determined through peak indexing and comparison with the characteristic reflection conditions of different crystal systems.
+
 <img src="images/img_2.png"><br>
 Figure 2: Diffractogram for an unknown material <br><br>
 

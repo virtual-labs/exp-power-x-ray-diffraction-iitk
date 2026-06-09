@@ -9,12 +9,6 @@
         "c": "To decrease the diffraction angle",
         "d": "To enhance fluorescence signals"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -25,12 +19,6 @@
         "b": "FCC",
         "c": "HCP",
         "d": "None of these"
-      },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -43,12 +31,6 @@
         "c": "when h, k and l are all even or all odd",
         "d": "None of these"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -59,12 +41,6 @@
         "b": "Monoclinic",
         "c": "Tetragonal",
         "d": "Cubic"
-      },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -77,13 +53,29 @@
         "c": "The specific crystal planes within the material",
         "d": "The colour of the material"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. For a cubic crystal, a diffraction peak corresponds to h<sup>2</sup>+k<sup></sup>2+l<sup>2</sup>=3. The Miller indices are: ",
+      "answers": {
+        "a": "(100)",
+        "b": "(110)",
+        "c": "(111)",
+        "d": "(200)"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. For a fixed X-ray wavelength, a diffraction peak appears at a larger 2θ angle than another peak. What can be inferred about the corresponding interplanar spacing?",
+      "answers": {
+        "a": "It is larger",
+        "b": "It is smaller",
+        "c": "It is unchanged",
+        "d": "It cannot be determined"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
