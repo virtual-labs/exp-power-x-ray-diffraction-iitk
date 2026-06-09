@@ -1,0 +1,133 @@
+body{
+    font-weight: bolder;
+}
+
+/* instruction css */
+#instruction-box{
+height: 50px;
+}
+
+/* Define the initial styles for the box */
+.box {
+    width: 70px;
+    height: 25px;
+    border-radius: 40px;
+    /* background-color: rgb(137, 160, 203); */
+    position: absolute;
+    bottom: 0;
+    transition: bottom 0.8s ease-in-out;
+    left:36%;
+    visibility: hidden;
+
+  }
+  
+  /* Define the animation state for the box when it moves to the top */
+  .box.moved {
+    bottom: 320px;
+    visibility: visible; /* Adjust this value to control how far the box moves */
+  }
+  .btn3{
+    border: #ccc;
+  }
+  
+
+
+.container-fluid{
+    border: 2px solid #141515;
+    border-radius: 5px;
+    display: flex;
+    color: white;
+    background: #29292d;
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+    gap: 6px;
+    width: 100%;
+    box-shadow: 0 0 10px rgb(71 69 69 / 66%);
+    margin: 5px;
+}
+.mb-3{
+    border: 2px solid black;
+    border-radius: 5px;
+  
+    padding: 5px;
+}
+/* .col-xl-4 {
+    width: 32.33333333%;
+    margin: 3px;
+    justify-content: space-between;
+} */
+
+.themed-grid-col{
+    border: 2px solid black;
+    border-radius: 5px;
+    /* margin: 4px; */
+    box-shadow: 0 0 10px rgb(14 14 14);
+}
+.slider-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* #dialogue box  */
+
+.text-center{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .dialogue-box{
+    /* width: 60%;
+    height: 30%; */
+    border-radius: 8px;
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.606);
+    transition: 0.3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 9999; */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dialogue-box button {
+    padding: 0rem 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.606);
+    border-style: none;
+    /* background-color: green; */
+    color: white;
+  }
+  .image-container {
+    position: relative;
+}
+
+/* Hidden image initially */
+.hidden-image {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    background-image: url('images/output/graph.png'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Initially hidden */
+    animation: revealImage 3s ease-in-out forwards; /* Adjust the delay and duration as needed */
+}
+
+@keyframes revealImage {
+    to {
+        opacity: 1;
+    }
+}

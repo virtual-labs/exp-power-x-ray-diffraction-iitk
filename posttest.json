@@ -1,0 +1,82 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of using a monochromator in XRD experiments:",
+      "answers": {
+        "a": "To increase the intensity of X-rays",
+        "b": "To filter out unwanted wavelengths and obtain monochromatic X-rays",
+        "c": "To decrease the diffraction angle",
+        "d": "To enhance fluorescence signals"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The crystal structure of Iron (Fe) at room temperature is?",
+      "answers": {
+        "a": "BCC",
+        "b": "FCC",
+        "c": "HCP",
+        "d": "None of these"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Reflections allowed for BCC crystal are?",
+      "answers": {
+        "a": "for even values of (h + k + l)",
+        "b": "for all values of h²+k²+l²",
+        "c": "when h, k and l are all even or all odd",
+        "d": "None of these"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The crystal structure which has lattice parameters a = b ≠ c and angles α = β = γ?",
+      "answers": {
+        "a": "Triclinic",
+        "b": "Monoclinic",
+        "c": "Tetragonal",
+        "d": "Cubic"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. In an XRD pattern, what do the peaks correspond to?",
+      "answers": {
+        "a": "The intensity of X-rays",
+        "b": "The atomic mass of elements",
+        "c": "The specific crystal planes within the material",
+        "d": "The colour of the material"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. For a cubic crystal, a diffraction peak corresponds to h<sup>2</sup>+k<sup></sup>2+l<sup>2</sup>=3. The Miller indices are: ",
+      "answers": {
+        "a": "(100)",
+        "b": "(110)",
+        "c": "(111)",
+        "d": "(200)"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. For a fixed X-ray wavelength, a diffraction peak appears at a larger 2θ angle than another peak. What can be inferred about the corresponding interplanar spacing?",
+      "answers": {
+        "a": "It is larger",
+        "b": "It is smaller",
+        "c": "It is unchanged",
+        "d": "It cannot be determined"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
