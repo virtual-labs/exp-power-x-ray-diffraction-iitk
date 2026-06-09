@@ -9,12 +9,6 @@
         "c": "1 to 5 nm",
         "d": "5-10 nm"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -25,12 +19,6 @@
         "b": "FCC",
         "c": "HCP",
         "d": "DHCP"
-      },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -43,12 +31,6 @@
         "c": "HCP",
         "d": "SC"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -59,12 +41,6 @@
         "b": "Distance between atoms in the unit cell",
         "c": "Interplanar spacing between crystal planes",
         "d": "The wavelength of the incident X-ray"
-      },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -77,11 +53,27 @@
         "c": "Bragg's law",
         "d": "Rutherford scattering"
       },
-      "explanations": {
-        "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Why are X-rays suitable for crystal structure determination?",
+      "answers": {
+        "a": "They have very high energy",
+        "b": "They travel faster than visible light.",
+        "c": "Their wavelength is comparable to interatomic spacings in crystals.",
+        "d": "They are not absorbed by solids"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. In Bragg's law, : nλ=2d sin⁡θ,what does 'd' represent:",
+      "answers": {
+        "a": "The lattice constant of the unit cell",
+        "b": "Distance between atoms in the unit cell",
+        "c": "Interplanar spacing between crystal planes",
+        "d": "The wavelength of the incident X-ray"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
