@@ -1,1 +1,2 @@
-Determine the crystal structure of the given material using X-Ray Diffraction
+<!-- Determine the crystal structure of the given material using X-Ray Diffraction -->
+To determine the crystal structure of a material using powder X-ray diffraction (XRD) by analyzing the diffraction peak positions and intensities, indexing the observed reflections, and identifying the crystal structure through comparison with theoretical diffraction patterns.
